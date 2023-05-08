@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+     <link rel="icon" href="https://f49-zpg-r.zdn.vn/6814553298438728434/d2066a860277dd298466.jpg">
+     <title>Đăng Nhập</title>
+ </head>
+ 
+ <body>
+     <div class="lg:flex">
+         <div class="hidden lg:flex bg-indigo-100 h-screen">
+             <img src="https://f49-zpg-r.zdn.vn/6814553298438728434/d2066a860277dd298466.jpg" background="transparent"
+                 speed="1" style="width: auto; height: auto;" ></img>
+         </div>
+         <div class="lg:w-1/2 xl:max-w-screen-sm h-screen">
+             <div class="py-10 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-15">
+                 <div class="cursor-pointer flex items-center">
+                     <div class="logo">
+                         <img src="./image/logo.png" alt="">
+                     </div>
+                     <div class="text-2xl text-indigo-800 tracking-wide ml-2 font-semibold">Tiệm Photocopy Quốc Trung
+                     </div>
+                 </div>
+             </div>
+             <div class="mt-5 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-7 xl:px-24 xl:max-w-2xl mb-3">
+                 <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+             xl:text-bold">Đăng Nhập</h2>
+                 <div class="mt-12">
+                     <form>
+                         <div>
+                             <div class="text-sm font-bold text-black-700 tracking-wide" style="font-size: 1.2em;">
+                                    Tên đăng nhập
+                                </div>
+                             <input id="email"
+                                 class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                 type="" placeholder="">
+                         </div>
+                         <div class="mt-8">
+                             <div class="flex justify-between items-center">
+                                 <div class="text-sm font-bold text-black-700 tracking-wide"style="font-size: 1.2em;">
+                                     Mật khẩu
+                                 </div>
+                             </div>
+                             <input id="password"
+                                 class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                 type="" placeholder="">
+                             </div>
+                         </div>
+                         <div class="mt-6">
+                             <div id="login" class="text-center bg-blue-700 text-gray-200 p-4 w-full rounded-full tracking-wide
+                             font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-blue-700 cursor-pointer
+                             shadow-lg">
+                                 Đăng Nhập
+                             </div>
+ 
+ 
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
+ 
+     </div>
+     <script>
+         var button = document.getElementById("login");
+         button.addEventListener("click", function () {
+             var email = document.getElementById("email").value;
+             var password = document.getElementById("password").value;
+             if (email == "photocopyquoctrung" && password == "thanhsang") {
+                 window.location.href = "./pages/dashboard/thongke.html";
+             } else {
+                 alert("Sai tài khoản và mật khẩu");
+             }
+         });
+     </script>
+ </body>
+ 
+ </html>
